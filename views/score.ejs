@@ -1,0 +1,98 @@
+<html>
+
+<head>
+	<title> Leaderboard </title>
+	<style>
+		h1 {
+			font-size: 60px;
+			text-align: center;
+			font-family: "Comic Sans MS";
+			color: #003300;
+		}
+
+		hr {
+			border: 2px solid green;
+			border-radius: 5px;
+		}
+
+		h2 {
+			font-size: 30px;
+			text-align: center;
+			font-family: "Arial";
+			color: #a76940;
+		}
+
+		table {
+			font-family: arial, sans-serif;
+			border-collapse: collapse;
+			width: 50%;
+
+		}
+
+		td,
+		th {
+			border: 1px solid #dddddd;
+			text-align: left;
+			padding: 8px;
+			text-align: center;
+		}
+
+		th {
+			background-color: rgb(176, 194, 78)
+		}
+
+		tr:nth-child(even) {
+			background-color: #dddddd;
+		}
+
+
+		button {
+			background-image: linear-gradient(to bottom right, gold, green);
+			border: none;
+			font-style: bold;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			display: inline-block;
+			font-size: 20px;
+			cursor: pointer;
+			border-radius: 12px;
+		}
+
+		button:hover {
+			background-image: linear-gradient(to bottom left, green, gold);
+		}
+	</style>
+</head>
+
+<body bgcolor=#ffff99>
+	<h1> Leaderboard </h1>
+	<h2>Top 10</h2>
+	<center><button type="button" name="game" onclick="window.location.href='/';">Back to Game</button></center>
+	<hr>
+	<center>
+		<table>
+			<tr>
+				<th> Player Name</th>
+				<th>Score</th>
+			</tr>
+			<% for(var i=0;i<10;i++){ %>
+
+
+				<tr>
+					<td>
+						<%=lbContents[i].playerName%>
+					</td>
+					<td>
+						<%=lbContents[i].score%>
+					</td>
+				</tr>
+
+
+				<% } %>
+		</table>
+	</center>
+
+</body>
+
+</html>
